@@ -20,9 +20,6 @@ checked =  f"{w}UNCHECKED"
 guild_id = ""
 
 
-
-# selenium_linker = eval(compile(,'<string>','exec'))
-
 def print_actions():
     clear()
     global active_tokens, invite_link, checked
